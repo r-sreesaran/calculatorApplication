@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.sree.services.test.testCalculator" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-07-09T11:45:02" hostname="srees-MacBook-Pro.local" time="0.007">
+  <properties/>
+  <testcase name="testAddition" classname="org.sree.services.test.testCalculator" time="0.005"/>
+  <testcase name="testDivision" classname="org.sree.services.test.testCalculator" time="0.0"/>
+  <testcase name="testMultiplication" classname="org.sree.services.test.testCalculator" time="0.0"/>
+  <testcase name="testSubtraction" classname="org.sree.services.test.testCalculator" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
