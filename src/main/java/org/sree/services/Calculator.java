@@ -1,30 +1,49 @@
 package org.sree.services;
 
+import java.util.List;
+
 public class Calculator {
 
-    int a;
-    int b;
+    List<Integer> values;
     int displayValue;
 
     public int add() {
-        return a + b;
+        int total=0;
+        total += displayValue;
+        for(int item:values) {
+            total += item;
+        }
+        return total;
     }
 
     public int subtract() {
-        return a - b;
+        int total=0;
+        total -= displayValue;
+        for(int item:values) {
+            total -= item;
+        }
+        return total;
     }
 
     public int multiply() {
-        return a * b;
+        int total=1;
+        total *= displayValue;
+        for(int item:values) {
+            total *= item;
+        }
+        return total;
     }
 
-    public Calculator(int a, int b) {
-        this.a = a;
-        this.b = b;
+    public Calculator(List<Integer> values) {
+        this.values = values;
+    }
+
+    public Calculator() {
+
     }
 
     public void clearDisplayValue() {
         displayValue = 0;
     }
-
+    public void  setDisplayValue(int value) {displayValue=value;}
 }

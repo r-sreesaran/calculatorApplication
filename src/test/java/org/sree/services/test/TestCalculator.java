@@ -4,23 +4,27 @@ import org.sree.services.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class TestCalculator {
-Calculator calculator;
     @Test
     public void testAddition() {
 
-        Assert.assertEquals(10, new Calculator(5,5).add(),"error in addition operation");
+        Assert.assertEquals(new Calculator(Arrays.asList(1,2,3)).add(),6,"error in addition operation");
    }
 
     @Test
     public void testSubtraction() {
-        Assert.assertEquals(0, new Calculator(5,5).subtract() , "Error in subtraction operation");
+
+        Assert.assertEquals(new Calculator(Arrays.asList(1,2,3)).subtract(),-6  , "Error in subtraction operation");
     }
 
     @Test
     public void testMultiplication() {
-        Assert.assertEquals(25, new Calculator(5,5).multiply(),"Error in multiplication operation");
-
+        Calculator calculator= new Calculator(Arrays.asList(1,2,3));
+        calculator.setDisplayValue(1);
+        Assert.assertEquals( calculator.multiply(),6,"Error in multiplication operation");
     }
     @Test
     public void testDivision() {
