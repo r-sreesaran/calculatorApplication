@@ -11,11 +11,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'executing the tests'
-                               echo '${env.WORKSPACE}..'
-                               dir('${env.WORKSPACE}') {
-                                 sh 'gradlew clean test'
-                               }
-            }
+                 sh 'gradle clean test'
+
         }
         stage('Deploy') {
             steps {
