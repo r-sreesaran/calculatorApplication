@@ -1,0 +1,39 @@
+pipeline {
+    agent {
+        label 'raspiberrypi-3' }
+
+    stages {
+        stage('Build') {
+            steps {
+               echo 'Building the project'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'executing the tests'
+                               echo '${env.WORKSPACE}..'
+                               dir('${env.WORKSPACE}') {
+                                 sh 'gradlew clean test'
+                               }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+
+        stage('Publish Reports') {
+             steps {
+              publishHTML (target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: true,
+                    reportDir: 'build/reports/tests/test',
+                    reportFiles: 'index.html',
+                    reportName: "test reports"
+                  ])
+             }
+        }
+    }
+}
