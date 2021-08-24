@@ -18,7 +18,8 @@ public class Calculator {
 
     public int subtract() {
         int total=0;
-        total -= displayValue;
+        total -=
+                displayValue;
         for(int item:values) {
             total -= item;
         }

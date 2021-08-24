@@ -2,6 +2,16 @@
     <test name="fundamental functional suite">
         <classes>
             <class name="org.sree.services.test.TestCalculator"></class>
+            <class name="org.sree.services.test.TestClass"></class>
+            <class name="org.sree.services.test.Testclass1"></class>
+            <class name="org.sree.services.test.Testclass2"></class>
+
+            <class name="org.sree.services.test1.TestClass"></class>
+            <class name="org.sree.services.test1.Testclass1"></class>
+            <class name="org.sree.services.test1.Testclass2"></class>
+
         </classes>
+
+
     </test>
 </suite>

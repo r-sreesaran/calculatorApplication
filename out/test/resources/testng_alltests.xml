@@ -1,0 +1,7 @@
+<suite>
+    <test name="fundamental functional suite">
+        <classes>
+            <class name="org.sree.services.test.TestCalculator"></class>
+        </classes>
+    </test>
+</suite>
