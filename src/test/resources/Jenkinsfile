@@ -11,12 +11,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'executing the tests'
-                try {
+                catchError { {
                 sh 'gradle clean test'
                 }
-                catch(Exception e) {
-                }
-
 
         }
         }
