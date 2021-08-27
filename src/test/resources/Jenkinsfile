@@ -11,11 +11,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'executing the tests'
-                catchError { {
+                catchError {
                 sh 'gradle clean test'
                 }
 
-        }
+            }
         }
         stage('Deploy') {
             steps {
